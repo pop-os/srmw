@@ -1,0 +1,18 @@
+[package]
+name = "srmw"
+version = "0.1.0"
+authors = ["Michael Aaron Murphy <mmstick@pm.me>"]
+categories = ["asynchronous", "rust-patterns"]
+description = "Asynchronous single-reader, multi-writer"
+edition = "2018"
+keywords = ["single", "reader", "multi", "writer"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/pop-os/srmw"
+
+[dependencies]
+async-std = "1"
+futures = "0.3"
+genawaiter = { version = "0.2", features = ["futures03"]}
+slab = "0.4"
+thiserror = "1"
