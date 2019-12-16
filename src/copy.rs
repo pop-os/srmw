@@ -56,7 +56,7 @@ impl<W: AsyncWrite + Unpin> MultiWriter<W> {
                     let slice = &buf[..read];
 
                     let mut stream = FuturesUnordered::from_iter(subscribed.iter_mut().map(
-                        |(indice, writer)| async move { (indice, writer.write(slice).await) },
+                        |(indice, writer)| async move { (indice, writer.write_all(slice).await) },
                     ));
 
                     while let Some((indice, why)) = stream.next().await {

@@ -1,6 +1,6 @@
 [package]
 name = "srmw"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Michael Aaron Murphy <mmstick@pm.me>"]
 categories = ["asynchronous", "rust-patterns"]
 description = "Asynchronous single-reader, multi-writer"
